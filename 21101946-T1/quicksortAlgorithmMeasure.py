@@ -2,6 +2,10 @@ import sys
 import random
 import time
 
+# Constantes
+studentId = '21101946'
+startRangeSeed = 0.0
+endRangeSeed = 1000.0
 
 def createRandomNumbersList(numberOfItens):
     numbersList = []
@@ -27,11 +31,6 @@ def partition(arr, low, high):
     arr[i + 1], arr[high] = arr[high], arr[i + 1]
     return i + 1
 
-# Constantes
-studentId = '21101946'
-startRangeSeed = 0.0
-endRangeSeed = 1000.0
-
 # Input
 numberOfItens = int(sys.argv[1])
 
@@ -46,4 +45,4 @@ quicksort(randomNumbersList, 0, len(randomNumbersList) - 1)
 ## Finalizando o timer
 elapsed = (time.time() - start_time)
 
-print(f"{studentId},{elapsed}")
+print(f"{studentId},{elapsed:.8f}")
